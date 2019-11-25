@@ -1,3 +1,3 @@
 # InterviewPrep
 
-This is my Repo for all my Interview Preparations
+This is a Repo for all my Interview Preparations
