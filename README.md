@@ -4,6 +4,7 @@ This is a Repo for all my Interview Preparations
 
 
 QAE
+----
 
 Array
 
@@ -14,6 +15,8 @@ Stack
 Queue
 
 LinkedList
+
+Tree
 
 Math
 
