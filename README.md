@@ -1,4 +1,4 @@
-# InterviewPrep
+# Interview_Prep
 
 This is a Repo for all my Interview Preparations
 
