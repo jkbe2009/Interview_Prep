@@ -4,7 +4,6 @@ This is a Repo for all my Interview Preparations
 
 
 QAE
-----
 
 Array
 
@@ -24,4 +23,4 @@ Misc
 
 FAQ's
 
-Must Know
+MustKnow
