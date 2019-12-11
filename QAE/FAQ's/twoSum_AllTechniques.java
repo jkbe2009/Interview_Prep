@@ -7,15 +7,15 @@ class twoSum_AllTechniques{
         int[] a = { 1, 9, 12, 3, 7, 5 };
         int[] b = { 1, 3, 5, 7, 10 };
 
-        //int[] result = twoSumBF(a,4);
-        //int[] result = twoSumBS(a,4);
+        //int[] result = twoSumBruteForce(a,4);
+        //int[] result = twoSumBinarySearch(a,4);
         //int[] result = twoSumTwoPointer(b,10);
-        int[] result = twoSumHM(b, 12);
+        int[] result = twoSumHashMap(b, 12);
 
         System.out.println(Arrays.toString(result));
     }
 
-    public static int[] twoSumBF(int[] a, int sum) {
+    public static int[] twoSumBruteForce(int[] a, int sum) {
         // O(n2) | O(1)
         if (a == null || a.length == 0)
             return new int[] { -1, -1 };
@@ -30,7 +30,7 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
-    public static int[] twoSumBS(int[] a, int sum) {
+    public static int[] twoSumBinarySearch(int[] a, int sum) {
         // O(nlogn) | O(1)
         if (a == null || a.length == 0)
             return new int[] { -1, -1 };
@@ -84,7 +84,7 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
-    public static int[] twoSumHM(int[] a, int target) {
+    public static int[] twoSumHashMap(int[] a, int target) {
         // O(n) | O(n)
         if (a == null || a.length == 0)
             return new int[] { -1, -1 };
