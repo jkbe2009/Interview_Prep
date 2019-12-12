@@ -22,8 +22,8 @@ class validPalindrome_String{
         //“Ma12 d21am”
 
         while(l<r){
-        while(!Character.isLetterOrDigit(s.charAt(l))) l++;
-        while(!Character.isLetterOrDigit(s.charAt(r))) r--;
+        while(l < r && !Character.isLetterOrDigit(s.charAt(l))) l++;
+        while(l < r && !Character.isLetterOrDigit(s.charAt(r))) r--;
 
         if(Character.toUpperCase(s.charAt(l)) != Character.toUpperCase(s.charAt(r))) return false;
 
