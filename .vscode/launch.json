@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - findString_In_String",
+            "request": "launch",
+            "mainClass": "findString_In_String",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - findString_InString",
+            "request": "launch",
+            "mainClass": "findString_InString",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - validPalindrome_String",
             "request": "launch",
             "mainClass": "validPalindrome_String",
