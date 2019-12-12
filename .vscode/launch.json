@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ValidPalindrome_String",
+            "request": "launch",
+            "mainClass": "ValidPalindrome_String",
+            "projectName": "My Git_647abc6f"
+        }
+    ]
+}
