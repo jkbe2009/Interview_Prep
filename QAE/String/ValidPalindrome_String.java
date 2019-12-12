@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class ValidPalindrome_String{
+class validPalindrome_String{
     
     public static void main(String[] args) throws Exception {
         String inp1 = null;
