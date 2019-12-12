@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - validPalindrome_String",
+            "request": "launch",
+            "mainClass": "validPalindrome_String",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - twoSum_AllTechniques",
+            "request": "launch",
+            "mainClass": "twoSum_AllTechniques",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ValidPalindrome_String",
             "request": "launch",
             "mainClass": "ValidPalindrome_String",
