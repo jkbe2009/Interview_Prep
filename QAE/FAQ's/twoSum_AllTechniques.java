@@ -100,12 +100,12 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
-/*  approach:   Already sorted input.
-                Use Hash Map
-                Scan through the array
-                for each element if the other pair exists in the map then return both the indices
-                else store all the elements and its index in map
- */
+    /*  approach:   Already sorted input.
+                    Use Hash Map
+                    Scan through the array
+                    for each element if the other pair exists in the map then return both the indices
+                    else store all the elements and its index in map
+    */
 
     public static int[] twoSumHashMap(int[] a, int target) {
         // O(n) | O(n)
