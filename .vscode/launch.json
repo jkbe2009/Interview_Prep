@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - wordReversal_AllTechniques",
+            "request": "launch",
+            "mainClass": "wordReversal_AllTechniques",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - stringReversal_AllTechniques",
+            "request": "launch",
+            "mainClass": "stringReversal_AllTechniques",
+            "projectName": "My Git_647abc6f"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - findString_In_String",
             "request": "launch",
             "mainClass": "findString_In_String",

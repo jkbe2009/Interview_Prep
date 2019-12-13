@@ -14,6 +14,7 @@ class validPalindrome_String{
         System.out.println(isValidPalindromeStr(inp3));
     }
 
+    
     public static boolean isValidPalindromeStr(String s){
         // O(n) || O(1)
         if(s == null || s.length()==0) throw new IllegalArgumentException("Invalid Input!");

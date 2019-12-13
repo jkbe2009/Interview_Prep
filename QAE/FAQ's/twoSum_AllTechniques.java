@@ -15,6 +15,7 @@ class twoSum_AllTechniques{
         System.out.println(Arrays.toString(result));
     }
 
+
     public static int[] twoSumBruteForce(int[] a, int sum) {
         // O(n2) | O(1)
         if (a == null || a.length == 0)
@@ -29,6 +30,7 @@ class twoSum_AllTechniques{
 
         return new int[] { -1, -1 };
     }
+
 
     public static int[] twoSumBinarySearch(int[] a, int sum) {
         // O(nlogn) | O(1)
@@ -46,6 +48,7 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
+
     public static int bSearch(int[] inp, int key) {
         // O(logn)
         int low = 0, high = inp.length - 1;
@@ -62,6 +65,7 @@ class twoSum_AllTechniques{
 
         return -1;
     }
+
 
     public static int[] twoSumTwoPointer(int[] a, int target) {
         // O(nlogn) | O(1)
@@ -84,6 +88,7 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
+    
     public static int[] twoSumHashMap(int[] a, int target) {
         // O(n) | O(n)
         if (a == null || a.length == 0)
