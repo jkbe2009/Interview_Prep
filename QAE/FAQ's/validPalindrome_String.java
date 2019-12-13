@@ -14,13 +14,13 @@ class validPalindrome_String{
         System.out.println(isValidPalindromeStr(inp3));
     }
 
-/*  approach:
-            Use Two pointers
-            while l and r don’t meet
-            start l from 0 and find the first alphanumeric character
-            start r from n-1 and find the last alphanumeric character
-            if charAt(l)!=charAt(r) return false
- */
+    /*  approach:
+                Use Two pointers
+                while l and r don’t meet
+                start l from 0 and find the first alphanumeric character
+                start r from n-1 and find the last alphanumeric character
+                if charAt(l)!=charAt(r) return false
+    */
     
     public static boolean isValidPalindromeStr(String s){
         // O(n) || O(1)
