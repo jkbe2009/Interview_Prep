@@ -18,6 +18,7 @@ class stringReversal_AllTechniques{
     
     }
     
+    // approach 1: string reversal - char by char
 
     public static String reverse1 (String s){
         //O(n) || O(1)
@@ -40,6 +41,7 @@ class stringReversal_AllTechniques{
         return new String(res);
     }
     
+    // approach 2: string reversal - Keep original spacing
 
     public static String reverse2 (String s){
         //O(n) || O(1)
@@ -65,6 +67,7 @@ class stringReversal_AllTechniques{
         return new String(res);
     }
 
+    // approach 3: string reversal - a) Except Vowels only b) vowels only (!vowels only)
 
     public static String reverse3a (String s){
         //O(n) || O(1)

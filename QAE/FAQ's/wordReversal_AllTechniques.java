@@ -13,6 +13,7 @@ class wordReversal_AllTechniques{
     
     }
 
+    // approach 1: split and join the words in reverse order
 
     public static String reverse1 (String s){
         // O(n) || O(m)
@@ -28,6 +29,7 @@ class wordReversal_AllTechniques{
         return sb.toString();
     }
 
+    // approach 2: iterate from last and find begin and end pos for each word.
 
     public static String reverse2 (String s){
         // O(n) || O(1)
@@ -52,6 +54,7 @@ class wordReversal_AllTechniques{
         return sb.toString().trim();
     }
 
+    // approach 3: rotation technique - reverse each word and then reverse overall
 
     public static String reverse3 (String s){
         // O(n) || O(1)

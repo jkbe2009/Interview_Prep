@@ -11,7 +11,10 @@ class zztemplate{
     
     }
     
-    
+    /*
+     * approach: For each element For all other elements going forward (find its
+     * other pair)
+     */   
 
 }
 

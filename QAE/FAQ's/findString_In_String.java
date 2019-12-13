@@ -18,6 +18,9 @@ class findString_In_String{
         System.out.println(strstr(inp[0],inp[1]));
     }
     
+    //approach : while
+    // i moves through the haystack one char at a time until n-len of needle
+    // j moves from 0 till every char matches every iteration
 
     public static int strstr(String hay, String needle) {
         // O(nm) | O(1)

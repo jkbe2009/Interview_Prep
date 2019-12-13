@@ -15,6 +15,10 @@ class twoSum_AllTechniques{
         System.out.println(Arrays.toString(result));
     }
 
+    /*
+     * approach: For each element
+     *               For all other elements going forward (find its other pair)
+     */
 
     public static int[] twoSumBruteForce(int[] a, int sum) {
         // O(n2) | O(1)
@@ -31,6 +35,9 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
+    /*
+     * approach: Sort the array. For each element find its other pair using binary search
+     */
 
     public static int[] twoSumBinarySearch(int[] a, int sum) {
         // O(nlogn) | O(1)
@@ -63,9 +70,14 @@ class twoSum_AllTechniques{
                 low = mid + 1;
         }
 
-        return -1;
+          return -1;
     }
 
+    /*  approach: Already sorted input.
+                  Use Two pointers:
+                  L start from 0
+                  R start from n-1 
+    */
 
     public static int[] twoSumTwoPointer(int[] a, int target) {
         // O(nlogn) | O(1)
@@ -88,7 +100,13 @@ class twoSum_AllTechniques{
         return new int[] { -1, -1 };
     }
 
-    
+/*  approach:   Already sorted input.
+                Use Hash Map
+                Scan through the array
+                for each element if the other pair exists in the map then return both the indices
+                else store all the elements and its index in map
+ */
+
     public static int[] twoSumHashMap(int[] a, int target) {
         // O(n) | O(n)
         if (a == null || a.length == 0)
