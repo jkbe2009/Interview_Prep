@@ -37,6 +37,7 @@ class binary_Search{
             else
                 l = m + 1;
         }
+        
         return -1;
      }
 
