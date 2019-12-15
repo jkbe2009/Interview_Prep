@@ -16,7 +16,7 @@ class integer_To_String{
      */   
 
      public static String int_To_String(int num){
-        // O(n) || O(n)
+        // O(n) || O(1)
 
         if (num ==0) return "0";
         
