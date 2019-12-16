@@ -4,7 +4,7 @@ import java.util.*;
 class string_To_Integer{
     
     public static void main(String[] args) throws Exception {
-    String[] inpArr = {"12345", "", null, "-234", "156$32", "+123" };
+    String[] inpArr = {"12345", "", null, "-234", "156$32", "+123","-1234567890123"};
 
     for(String inp : inpArr)
         System.out.println(atoi(inp));
@@ -23,6 +23,7 @@ class string_To_Integer{
         int res=0;
         boolean bNeg = false;
         int i=0;
+        int prev = 0;
 
         if (str.charAt(0) == '-' ) {bNeg = true; i++;}
         else if (str.charAt(0) == '+' ) i++;
@@ -31,6 +32,9 @@ class string_To_Integer{
         char ch = str.charAt(i);
         if (Character.isDigit(ch)) {
         res = (res *10) + Character.getNumericValue(ch);
+        if (res / 10 != prev)
+            return bNeg ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        prev = res;
         }
         else break;
         }

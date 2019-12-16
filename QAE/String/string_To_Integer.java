@@ -1,43 +1,50 @@
 
 import java.util.*;
 
-class string_To_Integer{
-    
+class string_To_Integer {
+
     public static void main(String[] args) throws Exception {
-    String[] inpArr = {"12345", "", null, "-234", "156$32", "+123" };
+        String[] inpArr = { "12345", "", null, "-234", "156$32", "+123", "-1234567890123" };
 
-    for(String inp : inpArr)
-        System.out.println(atoi(inp));
-    
+        for (String inp : inpArr)
+            System.out.println(atoi(inp));
+
     }
-    
-    /*
-     * approach: For each character convert it into its numeric equivalent (if valid) else break loop other pair)
-     */   
 
-     public static int atoi (String str){
+    /*
+     * approach: For each character convert it into its numeric equivalent (if
+     * valid) else break loop other pair)
+     */
+
+    public static int atoi(String str) {
         // O(n) || O(1)
 
-        if (str== null || str.length() == 0) return -1;
+        if (str == null || str.length() == 0)
+            return -1;
 
-        int res=0;
+        int res = 0;
         boolean bNeg = false;
-        int i=0;
+        int i = 0;
+        int prev = 0;
 
-        if (str.charAt(0) == '-' ) {bNeg = true; i++;}
-        else if (str.charAt(0) == '+' ) i++;
+        if (str.charAt(0) == '-') {
+            bNeg = true;
+            i++;
+        } else if (str.charAt(0) == '+')
+            i++;
 
-        for (; i < str.length(); i++){
-        char ch = str.charAt(i);
-        if (Character.isDigit(ch)) {
-        res = (res *10) + Character.getNumericValue(ch);
-        }
-        else break;
+        for (; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (Character.isDigit(ch)) {
+                res = (res * 10) + Character.getNumericValue(ch);
+                if (res / 10 != prev)
+                    return bNeg ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+                prev = res;
+            } else
+                break;
         }
 
-        return bNeg?-res:res;
-        }
+        return bNeg ? -res : res;
+    }
 
 }
-
-
