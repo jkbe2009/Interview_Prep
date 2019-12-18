@@ -13,7 +13,7 @@ class len_longest_Substr_uniqueChars{
     }
     
     /*
-     * approach 1: Brute Force     * 
+     * approach 1: Brute Force     
      * find all possible substrings and calculate the length of the unique chars only
      * find the maximum length of those strings 
      * return the max_len
