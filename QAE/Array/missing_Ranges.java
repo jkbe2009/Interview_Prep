@@ -67,7 +67,7 @@ class missing_Ranges{
         }
 
         return result;
-        }
+    }
 
 
     /*
@@ -104,6 +104,6 @@ class missing_Ranges{
         return (from == to) ? String.valueOf(from) : from +"->"+ to ;
     }
 
-    }
+}
 
 
