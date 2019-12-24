@@ -4,17 +4,17 @@ import java.util.*;
 class one_Edit_Distance{
     
     public static void main(String[] args) throws Exception {
-        String[] inpArr = {
+        String[][] inpArr = {
             {"abcd","acd"},
             {"acd","abcd"},
             {"abcd","abed"},
             {"abc","adb"},
-            {"abc","adb"},
+            {"abc","abf"},
             {"abcde","abecd"}
         };
 
         for(String inp[] : inpArr){
-            System.out.println(one_Edit_Distance (inp[0],inp[1]));
+            System.out.println(one_Edit_Distance_complex (inp[0],inp[1]));
             System.out.println(one_Edit_Simple (inp[0],inp[1]));
         }
     }
@@ -28,13 +28,13 @@ class one_Edit_Distance{
     if not equal find the smallest string call method 2 to find is_true and return result
     */   
 
-    public static boolean one_Edit_Distance (String s, String t) {
+    public static boolean one_Edit_Distance_complex (String s, String t) {
         // O(n) || O(1)
         if (s == null || s.length()==0 || t == null || t.length()==0) return false;
 
         int lens = s.length(), lent = t.length();
 
-        if ( abs(lens-lent) > 1) return false;
+        if (Math.abs(lens-lent) > 1) return false;
 
         if(Math.abs(lens-lent) == 0) return mod(s,t);
 
@@ -89,7 +89,7 @@ class one_Edit_Distance{
         // O(n) || O(1)
         if (s == null || s.length()==0 || t == null || t.length()==0) return false;
 
-        int slen = s.length(), slen = t.length();
+        int slen = s.length(), tlen = t.length();
 
         if (Math.abs(slen - tlen) >1) return false;
 

@@ -30,15 +30,16 @@ class longest_Palindromic_Substr{
 
     public static String longest_Pal_Substr_bf (String s) {
         // O(n3) || O(1)
-        if (s == null || s.length()==0) return “”;
+        if (s == null || s.length()==0) return "";
 
         String res = s.substring(0,1);
 
         for (int i =0; i<s.length()-1; i++){
-            for (int j=0; j<s.length(); j++){
-                if (isPalindrome (s, i, j) && (j-1+1)> res.length()) {
-                res = s.substring(i,j+1);
+            for (int j=i+1; j<s.length(); j++){
+                if (isPalindrome (s, i, j) && (j-i+1)> res.length()) {
+                     res = s.substring(i,j+1);
                  }
+                 //else break;
              }
         }
 
@@ -46,7 +47,7 @@ class longest_Palindromic_Substr{
         return res;
     }
 
-    public static boolean isPalindrome (String s , int i, int j){
+    public static boolean isPalindrome (String s, int i, int j){
 
         while (i<j){
             if (s.charAt(i) != s.charAt(j)) return false;
@@ -69,16 +70,16 @@ class longest_Palindromic_Substr{
 
     public static String longest_Pal_Substr (String s){
         //O(n2) || O(1)
-        if (s == null || s.length()==0) return “”;
+        if (s == null || s.length()==0) return "";
 
         String res = s.substring(0,1);
 
         for (int i=0; i<s.length(); i++){
             
-            String s = expand(s, i, i);
-            if (s.length() > res.length()) res = s;
-            String s = expand(s, i, i+1);
-            if (s.length() > res.length()) res = s;
+            String s1 = expand(s, i, i);
+            if (s1.length() > res.length()) res = s1;
+            String s2 = expand(s, i, i+1);
+            if (s2.length() > res.length()) res = s2;
 
         }
 
