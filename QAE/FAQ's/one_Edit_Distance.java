@@ -23,7 +23,7 @@ class one_Edit_Distance{
     approach 1: long route
 
     find the difference between the length of s and t
-    return false id its > 1
+    return false if its > 1
     if both are equal call method 1 to find is_true and return result
     if not equal find the smallest string call method 2 to find is_true and return result
     */   
@@ -50,12 +50,10 @@ class one_Edit_Distance{
 
         boolean bFlag = false;
         for (int i =0; i< s1.length(); i++){
-
-        if (s1.charAt(i) != s2.charAt(i)) {
-            if (bFlag) return false;
-        bFlag = true;
-        }
-
+            if (s1.charAt(i) != s2.charAt(i)) {
+                if (bFlag) return false;
+                bFlag = true;
+            }
         }
 
         return true;
@@ -101,7 +99,6 @@ class one_Edit_Distance{
         int i=0, j=0; boolean foundDiff = false;
 
         while ( i<s1.length() && j<s2.length()) {
-
             if (s1.charAt(i) != s2.charAt(j)){
                 if (foundDiff) return false;
                 if( s1.length() == s2.length() ) { i++; j++;}
@@ -114,5 +111,5 @@ class one_Edit_Distance{
         return true;
     }
 
-
+    
 }

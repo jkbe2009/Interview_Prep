@@ -43,7 +43,6 @@ class longest_Palindromic_Substr{
              }
         }
 
-
         return res;
     }
 
