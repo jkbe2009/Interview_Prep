@@ -4,11 +4,11 @@ import java.util.*;
 class integer_To_String{
     
     public static void main(String[] args) throws Exception {
-    int[] inpArr = {123, -123, 0};
+        int[] inpArr = {123, -123, 0};
 
-    for(int inp : inpArr)
-        System.out.println(int_To_String(inp));
-    
+        for(int inp : inpArr)
+            System.out.println(int_To_String(inp));
+        
     }
     
     /*

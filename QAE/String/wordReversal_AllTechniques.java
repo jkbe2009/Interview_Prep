@@ -4,13 +4,13 @@ import java.util.*;
 class wordReversal_AllTechniques{
     
     public static void main(String[] args) throws Exception {
-    String inpArr1 = "the sky is blue";
-    String inpArr2 = " the sky  is   blue  ";
+        String inpArr1 = "the sky is blue";
+        String inpArr2 = " the sky  is   blue  ";
 
-    System.out.println(reverse1(inpArr1));
-    System.out.println(reverse2(inpArr2));
-    System.out.println(reverse3(inpArr1));
-    
+        System.out.println(reverse1(inpArr1));
+        System.out.println(reverse2(inpArr2));
+        System.out.println(reverse3(inpArr1));
+        
     }
 
     // approach 1: split and join the words in reverse order
@@ -74,11 +74,13 @@ class wordReversal_AllTechniques{
         }
 
         reversal(res,0,len-1);
+
         return new String(res);
-        }
+    }
 
 
     public static void reversal(char[] ch, int i, int j) {
+       
         while(i<j){
             char temp = ch[i];
             ch[i] = ch[j];
@@ -86,6 +88,7 @@ class wordReversal_AllTechniques{
             i++;
             j--;
         }
+        
         return;
     }
 

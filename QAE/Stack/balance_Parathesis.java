@@ -4,11 +4,11 @@ import java.util.*;
 class balance_Parathesis{
     
     public static void main(String[] args) throws Exception {
-    String[] inpArr = { "({[]})", "()[]{}", "([)]", "", null, "(){", "()[{}]"};
+        String[] inpArr = { "({[]})", "()[]{}", "([)]", "", null, "(){", "()[{}]"};
 
-    for(String inp : inpArr)
-        System.out.println(isValid_Paranthesis(inp));
-    
+        for(String inp : inpArr)
+            System.out.println(isValid_Paranthesis(inp));
+        
     }
     
     /*

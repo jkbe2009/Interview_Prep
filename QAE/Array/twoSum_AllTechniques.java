@@ -70,7 +70,7 @@ class twoSum_AllTechniques{
                 low = mid + 1;
         }
 
-          return -1;
+        return -1;
     }
 
     /*  approach: Already sorted input.

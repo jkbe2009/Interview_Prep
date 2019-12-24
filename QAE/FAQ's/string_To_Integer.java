@@ -4,11 +4,11 @@ import java.util.*;
 class string_To_Integer{
     
     public static void main(String[] args) throws Exception {
-    String[] inpArr = {"12345", "", null, "-234", "156$32", "+123","-1234567890123"};
+        String[] inpArr = {"12345", "", null, "-234", "156$32", "+123","-1234567890123"};
 
-    for(String inp : inpArr)
-        System.out.println(atoi(inp));
-    
+        for(String inp : inpArr)
+            System.out.println(atoi(inp));
+        
     }
     
     /*
@@ -40,7 +40,7 @@ class string_To_Integer{
         }
 
         return bNeg?-res:res;
-        }
+    }
 
 }
 

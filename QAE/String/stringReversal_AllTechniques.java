@@ -4,18 +4,18 @@ import java.util.*;
 class stringReversal_AllTechniques{
     
     public static void main(String[] args) throws Exception {
-    String[] inpArr = { "String",
-                        "",
-                        "I am good!",
-                        null,
-                        "Machine"};
+        String[] inpArr = { "String",
+                            "",
+                            "I am good!",
+                            null,
+                            "Machine"};
 
-    System.out.println(reverse1(inpArr[0]));
-    System.out.println(reverse1(inpArr[1]));
-    System.out.println(reverse2(inpArr[2]));
-    System.out.println(reverse3a(inpArr[4]));
-    System.out.println(reverse3b(inpArr[4]));
-    
+        System.out.println(reverse1(inpArr[0]));
+        System.out.println(reverse1(inpArr[1]));
+        System.out.println(reverse2(inpArr[2]));
+        System.out.println(reverse3a(inpArr[4]));
+        System.out.println(reverse3b(inpArr[4]));
+        
     }
     
     // approach 1: string reversal - char by char
@@ -122,8 +122,8 @@ class stringReversal_AllTechniques{
         }
 
         return new String(res);
-        }
-
     }
+
+}
 
 

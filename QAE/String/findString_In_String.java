@@ -4,18 +4,18 @@ import java.util.*;
 class findString_In_String{
     
     public static void main(String[] args) throws Exception {
-    String[][] inpArr = {   {"","art"},
-                            {"karthik", ""},
-                            {null, "art"},
-                            {"karthik", null},
-                            {"karthik", "art"},
-                            { "karthik", "fdaf" },
-                            {"karthik", "thi"},
-                            { "karthik", "thic" },
-                        };
+        String[][] inpArr = {   {"","art"},
+                                {"karthik", ""},
+                                {null, "art"},
+                                {"karthik", null},
+                                {"karthik", "art"},
+                                { "karthik", "fdaf" },
+                                {"karthik", "thi"},
+                                { "karthik", "thic" },
+                            };
 
-    for(String inp[] : inpArr)
-        System.out.println(strstr(inp[0],inp[1]));
+        for(String inp[] : inpArr)
+            System.out.println(strstr(inp[0],inp[1]));
     }
     
     //approach : while

@@ -3,7 +3,7 @@ import java.util.*;
 
 class zztemplate{
     
-        public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         int[] inpArr = {};
 
         for(int inp : inpArr){
@@ -12,8 +12,7 @@ class zztemplate{
     }
     
     /*
-     * approach: For each element For all other elements going forward (find its
-     * other pair)
+
      */   
 
 }

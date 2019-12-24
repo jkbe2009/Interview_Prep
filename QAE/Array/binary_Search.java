@@ -4,12 +4,12 @@ import java.util.*;
 class binary_Search{
     
     public static void main(String[] args) throws Exception {
-    int[] inpArr = {1,3,6,9,10,15,18,24};
-    int key = 18;
+        int[] inpArr = {1,3,6,9,10,15,18,24};
+        int key = 18;
 
-    System.out.println(bSearch_Iter (inpArr, key));
-    System.out.println(bSearch_Rec (inpArr, key, 0, inpArr.length-1));
-    
+        System.out.println(bSearch_Iter (inpArr, key));
+        System.out.println(bSearch_Rec (inpArr, key, 0, inpArr.length-1));
+        
     }
     
     /*
@@ -65,7 +65,7 @@ class binary_Search{
         else if (key < a[m]) return bSearch_Rec (a, key, l, m-1);
         else return bSearch_Rec (a, key, m+1, r);
 
-        }
+    }
 
 }
 
