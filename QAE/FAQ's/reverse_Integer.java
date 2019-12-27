@@ -21,7 +21,7 @@ class reverse_Integer{
     Reduce the num = num/10
     wend
     return result if not overflowed else return the max or min value accordingly
-     */   
+    */   
 
      public static int reverse_Int (int num) {
         // O(n) || O(1)
