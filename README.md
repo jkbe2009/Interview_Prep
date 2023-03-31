@@ -4,22 +4,25 @@ This is a Repo for all my Interview Preparation and skills demonstration
 
 QAE
 
-Array
+    Array
 
-String
+    String
 
-Stack
+    Stack
 
-Queue
+    Queue
 
-LinkedList
+    LinkedList
 
-Tree
+    Tree
 
-Math
+    Math
 
-Misc
+    Misc
 
-FAQ's
+    FAQ's
 
-MustKnow
+    MustKnow
+__________________________________________________________________
+
+SDET
