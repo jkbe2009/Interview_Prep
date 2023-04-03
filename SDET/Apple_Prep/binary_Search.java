@@ -34,43 +34,34 @@ class Solution {
             else return -1;
         }
 
-
         //Rec case:
         int m = (l+r)/2; 
-
 
         if (key == inp[m]) return m;
         else if (key < inp[m]) return bSearchRec(inp, key, l, m-1);
         else return bSearchRec(inp, key, m+1, r);
-
 
     }
 
 
     public static int bSearchItr(int[] inp, int key){
 
-
         int l = 0;
         int r = inp.length-1;
 
-
         while (l<=r){
-
+            
             int m = (l+r)/2;
-
 
             if(key == inp[m]) return m;
 
             else if (key < inp[m]) r = m-1;
 
-
             else l = m+1;
 
         }
 
-
         return -1;
-
     }
 
 }
