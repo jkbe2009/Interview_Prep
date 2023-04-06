@@ -27,7 +27,6 @@ class Solution {
 
         System.out.println(ls(s));
         System.out.println(lss(s));
-
     }
 
 
@@ -56,7 +55,6 @@ class Solution {
         }
 
         return max_len;
-
     }
 
 
