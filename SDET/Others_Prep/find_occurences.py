@@ -45,7 +45,7 @@ def find_last_occ(a, key):
 def find_total_occ(a, key):
   l = find_first_occ(a, key)
   if l == -1:
-    return -1
+    return 0
   r = find_last_occ(a, key)
 
   # Return total occ or count
