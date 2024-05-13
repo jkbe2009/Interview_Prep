@@ -38,5 +38,4 @@ class Solution(object):
             res = res + reversed_word
             res = res + " "
 
-        
         return strip(self.reverse(res))
