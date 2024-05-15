@@ -2,6 +2,16 @@
 
 This is a Repo for all my Interview Preparation and skills demonstration
 
+
+SDET
+
+    Others_Prep
+    
+    Apple_Prep    
+
+__________________________________________________________________
+
+
 QAE
 
     Array
@@ -23,10 +33,5 @@ QAE
     FAQ's
 
     MustKnow
-__________________________________________________________________
 
-SDET
 
-    Apple_Prep
-
-    Other_Prep
