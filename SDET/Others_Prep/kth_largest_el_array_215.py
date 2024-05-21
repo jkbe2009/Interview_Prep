@@ -8,11 +8,6 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        map = {}
-        min_heap = []
-
-        for val in nums:
-            map[val] = map.get(val, 0) + 1
         
         def option_1():
             # O(n)+O(n)+O(klogn) || O(n)+O(n)
