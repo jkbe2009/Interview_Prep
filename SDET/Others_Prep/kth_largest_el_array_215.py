@@ -27,6 +27,8 @@ class Solution(object):
             # O(n)+O(n-klogk) || O(n+k)
             min_heap = []
             for item in nums:
+                if len(min_heap) >= k and item < min_heap[0]:
+                    continue
                 heapq.heappush(min_heap, item)
                 if len(min_heap) > k:
                     heapq.heappop(min_heap)
