@@ -17,19 +17,21 @@ class Solution(object):
         # option 1: Sort the map and print the top k
         # O(n+nlogn) || O(n)
         def option1():
-            sorted_items = sorted(map.items(), key = lambda item : item[1], reverse= True)
+            sorted_items = sorted(map.items(), key = lambda item : item[1], reverse = True)
             for i in range(k):
                 item = sorted_items[i]
                 result.append(item[0])
             return result
 
         # option 2: Use a Max Heap and print the top k
-        # O(n+klogn) || O(n+n)
+        # O(n+n(heapify)+klogn(add to result)) || O(n+n)
         def option2():
-            max_heap = []
-            for item in map.items():
-                val = (-1*item[1], item[0])
-                heapq.heappush(max_heap, val)
+            # max_heap = []
+            # for item in map.items():
+            #     val = (-1*item[1], item[0])
+            #     heapq.heappush(max_heap, val)
+            max_heap = [(-1*item[1], item[0]) for item in map.items()]
+            heapq.heapify(max_heap)
             
             for i in range(k):
                 val = heapq.heappop(max_heap)
@@ -37,7 +39,7 @@ class Solution(object):
             return result
 
         # option 3: Use a Min Heap and print the top k
-        # O(n+klogk) || O(n+k)
+        # O(n+klogk(build heap tree)+klogk(add to result)) || O(n+k)
         def option3():
             min_heap = []
             for item in map.items():
@@ -53,5 +55,5 @@ class Solution(object):
 
 
         # return option1()
-        # return option2()
-        return option3()
+        return option2()
+        # return option3()
