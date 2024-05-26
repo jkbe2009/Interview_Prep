@@ -10,14 +10,14 @@ def find_min_ele(a):
 
     if (m == 0 or a[m] < a[m-1]) and (m == len(a)-1 or a[m] < a[m+1]):
       return a[m]
-    elif a[l] <= a[m]:
-      # left side is sorted
-      # Go to right side
-      l = m+1
-    else:
+    elif a[r] >= a[m]:
       # right side is sorted
       # Go to left side
       r = m-1
+    else:
+      # left side is sorted
+      # Go to right side
+      l = m+1
   return a[l]
 
 
@@ -40,7 +40,7 @@ def rotate_left_inplace(a, k):
   print(f"Minimum element is : ",find_min_ele(a))
   return
 
-a = [1,2,3,4,5]
+a = [4,5,6,7,0,1,2]
 
 for k in range(len(a)+1):
   print(f"\nBy {k}")
