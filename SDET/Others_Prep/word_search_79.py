@@ -6,37 +6,32 @@ class Solution(object):
         :type word: str
         :rtype: bool
         """
-        res = []
-        visited = [[False] * len(board[0]) for i in range(len(board))]
+        visited = set()
 
-        def helper(curr, i , j):
-            # Base case:
-            if curr == word:
-                res.append(curr)
-                return
-                
-            if not (i >= 0 and i < len(board)) or not (j >= 0 and j < len(board[i])):
-                return
-
-            if visited[i][j]:
-                return
-
-            if len(curr) > len(word) or (curr != "" and curr[-1] != word[len(curr)-1]):
-                return
+        def helper(ind, i, j):
+            # Base Case:
+            if ind == len(word):
+                return True
+            
+            if ((i, j) in visited or i < 0 or i >= len(board) or
+                j < 0 or j >= len(board[i]) or word[ind] != board[i][j]):
+                return False
             
             # Recursive Case:
-            visited[i][j] = True
-            helper(curr + board[i][j], i+1 , j)
-            helper(curr + board[i][j], i-1 , j)
-            helper(curr + board[i][j], i , j+1)
-            helper(curr + board[i][j], i , j-1)
-            visited[i][j] = False
-
-            return
+            visited.add((i, j))
+            ans = (
+                helper(ind+1, i, j+1) or
+                helper(ind+1, i, j-1) or
+                helper(ind+1, i+1, j) or
+                helper(ind+1, i-1, j)
+            )
+            visited.remove((i, j))
+            return ans
         
         for i in range(len(board)):
             for j in range(len(board[i])):
-                helper("", i , j)
-    
-        return len(res) > 0
-
+                if helper(0, i, j):                
+                    return True
+        
+        return False
+                
