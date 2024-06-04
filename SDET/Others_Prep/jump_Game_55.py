@@ -8,9 +8,7 @@ class Solution(object):
         visited = [False] * len(nums)
 
         def helper_recursive(ind):
-            # if ind == len(nums)-1:
-            #     return True
-
+            # O(n^n) || O(n)
             if ind == len(nums)-1 and nums[ind] == 0:
                 return True
 
@@ -38,12 +36,14 @@ class Solution(object):
             return False
 
         def helper_dp():
+            # O(n^2) || O(n)
             for i in range(len(nums)-1, -1, -1):
                 if i+nums[i] >= len(nums)-1 or next_jump(i):
                     can_jump[i] = True
             return can_jump[0]
 
         def helper_dp_optimised():
+            # O(n) || O(1)
             target = len(nums)-1
             for i in range(len(nums)-1, -1, -1):
                 if i+nums[i] >= target:
