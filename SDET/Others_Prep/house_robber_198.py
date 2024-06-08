@@ -16,11 +16,11 @@ class Solution(object):
           
 
         def iterative_soln():
-            if len(nums) < 2:
-                return max(nums)
 
             """
             Using a dp array
+            if len(nums) == 1:
+                return nums[0]
 
             dp = [0] * len(nums)
             dp[-1] = nums[-1]
