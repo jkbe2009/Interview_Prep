@@ -10,9 +10,7 @@ class Solution(object):
         s1map, s2map = {}, {}
         s = 0
 
-        def is_anagram(map1, map2):
-            return map1 == map2
-            
+        def is_anagram(map1, map2):            
             if len(map1) != len(map2):
                 return False
             
@@ -29,7 +27,6 @@ class Solution(object):
             s2map[s2[e]] = s2map.get(s2[e], 0) + 1
 
             if e-s+1 == len(s1):
-                print(s1map, s2map)
                 if is_anagram(s1map, s2map):
                     return True
                 s2map[s2[s]] = s2map.get(s2[s]) - 1
