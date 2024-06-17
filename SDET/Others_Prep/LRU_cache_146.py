@@ -90,3 +90,68 @@ class LRUCache(object):
 # obj = LRUCache(capacity)
 # param_1 = obj.get(key)
 # obj.put(key,value)
+
+"""
+Retry - 1
+
+class Node:
+    def __init__(self, key, val):
+        self.key = key
+        self.val = val
+        self.prev = None
+        self.next = None
+
+class LRUCache(object):
+    def __init__(self, capacity):
+        self.store = {}
+        self.capacity = capacity
+        self.front = Node(-1, -1)
+        self.back = Node(-1, -1)
+        self.front.next = self.back
+        self.back.prev = self.front
+    
+    def remove(self, temp):
+        # Remove node from the DLL
+        temp.prev.next = temp.next
+        temp.next.prev = temp.prev
+
+        # Remove from the map
+        del self.store[temp.key]
+        # Return the removed node
+        return temp
+    
+    def add(self, key, val):
+        # Add to the back of DLL
+        temp = Node(key, val)
+        pre = self.back.prev
+        temp.next = self.back
+        temp.prev = pre
+        pre.next = temp
+        self.back.prev = temp
+
+        # Return the new node
+        return temp
+
+    def get(self, key):
+        if key not in self.store:
+            return -1
+        temp = self.remove(self.store[key])
+        self.store[key] = self.add(key, temp.val)
+        return self.store[key].val
+
+    def put(self, key, value):
+        if len(self.store) >= self.capacity and key not in self.store:
+            self.remove(self.front.next)
+        
+        if key in self.store:
+            self.remove(self.store[key])
+
+        self.store[key] = self.add(key, value)
+        
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
+"""
