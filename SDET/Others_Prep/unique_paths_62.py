@@ -1,4 +1,5 @@
 
+
 class Solution(object):
     def uniquePaths(self, m, n):
         """
@@ -9,9 +10,9 @@ class Solution(object):
         
         res = []
 
-        def dfs(i, j):
+        def dfs_basic(i, j):
             # Base case:
-            if i == m-1 and j == n-1:
+            if (i == m-1 and j == n-1):
                 res.append(True)
                 return
 
@@ -19,11 +20,31 @@ class Solution(object):
                 return
             
             # Recursive case:
-            dfs(i, j+1)
-            dfs(i+1, j)
+            dfs_basic(i, j+1)
+            dfs_basic(i+1, j)
 
             return
+
         
+        solution = [[-1] * n for _ in range(m)]
+
+        def dfs_opt(i, j):
+            # Base case:
+            if (i == m-1 and j == n-1):
+                return 1
+
+            if i < 0 or i >= m or j < 0 or j >= n:
+                return 0
+            
+            if solution[i][j] != -1:
+                return solution[i][j]
+            
+            # Recursive case:
+            ans = dfs_opt(i, j+1) + dfs_opt(i+1, j)
+            solution[i][j] = ans
+            return ans
+
+
         def iterative():
             dp = [[1] * n for _ in range(m)]
 
@@ -35,7 +56,9 @@ class Solution(object):
             return dp[m-1][n-1]
 
 
-        # dfs(0, 0)
+        # dfs_basic(0, 0)
         # return len(res)
 
-        return iterative()
+        return dfs_opt(0 ,0)
+
+        # return iterative()
