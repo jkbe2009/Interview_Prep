@@ -1,5 +1,4 @@
 
-
 class Solution(object):
     def uniquePaths(self, m, n):
         """
@@ -48,17 +47,19 @@ class Solution(object):
         def iterative():
             dp = [[1] * n for _ in range(m)]
 
-            for i in range(1, m):
-                for j in range(1, n):
-                    op1 = dp[i-1][j] if i-1 >= 0 else 0
-                    op2 = dp[i][j-1] if j-1 >= 0 else 0
+            for i in range(m-1, -1, -1):
+                for j in range(n-1, -1, -1):
+                    if i == m-1 and j == n-1:
+                        continue
+                    op1 = dp[i+1][j] if i+1 < m else 0
+                    op2 = dp[i][j+1] if j+1 < n else 0
                     dp[i][j] = op1 + op2
-            return dp[m-1][n-1]
+            return dp[0][0]
 
 
         # dfs_basic(0, 0)
         # return len(res)
 
-        return dfs_opt(0 ,0)
+        # return dfs_opt(0 ,0)
 
-        # return iterative()
+        return iterative()
